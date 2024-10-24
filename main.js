@@ -14,13 +14,13 @@ async function deleteWatchLaterVideos() {
             }
         }
     }
-    console.log('すべての動画が処理されました。');
+    console.log('待機中･･･。');
 }
 
 async function runInLoop() {
     while (true) {
         await deleteWatchLaterVideos();
-        await new Promise(resolve => setTimeout(resolve, 10000)); 
+        await new Promise(resolve => setTimeout(resolve, 5000)); 
     }
 }
 
